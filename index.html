@@ -251,7 +251,11 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <p>Comment</p>
+          <p>We integrate Forward Curvature-Matching (FCM) with diffusion models to enable precise, 
+            training-free 3D reconstruction. By dynamically computing optimal step sizes via forward 
+            automatic differentiation—avoiding heuristic fixed steps or complex adjoints—our method 
+            achieves high-fidelity results.
+          </p>
           <img src="./static/images/method_figure.jpg" alt="Method Figure" style="width: 100%; height: auto;">
         </div>
       </div>
@@ -332,14 +336,23 @@
         <h2 class="title is-3">Experimental Results</h2>
         <div class="content has-text-justified">
           <h3 class="title is-4">ShapeNet Comparison</h3>
-          <p>Comment</p>
+          <p>We evaluate our method with single-view 3D reconstruction tasks on the ShapeNet 
+            dataset, covering four distinct object categories: (1) airplane, (2) car, (3) chair, 
+            and (4) table. Our approach outperforms existing diffusion-based baselines, 
+            specifically PC<sup>2</sup> and BDM, in terms of F-score, Chamfer Distance (CD), and Earth 
+            Mover's Distance (EMD), achieving superior geometric accuracy.
+          </p>
             <h4 class="title is-5">Quantitative Results</h4>
             <img src="./static/images/shapenet_table.png" alt="ShapeNet Comparison" style="width: 100%; height: auto;">
             <h4 class="title is-5">Qualitative Results</h4>
             <img src="./static/images/shapenet_comparison.jpg" alt="ShapeNet Comparison" style="width: 100%; height: auto;">
 
           <h3 class="title is-4">CO3D Comparison</h3>
-          <p>Comment</p>
+          <p>We further evaluate our method on the real-world CO3D dataset, focusing on challenging 
+            categories such as (1) hydrant and (2) teddybear, along with multi-view reconstruction 
+            scenarios. Our method outperforms the baseline PC<sup>2</sup> in terms of visual fidelity 
+            and structural detail preservation, demonstrating robust zero-shot generalization 
+            to real-world captures.</p>
           <img src="./static/images/co3d_comparison.jpg" alt="CO3D Comparison" style="width: 100%; height: auto;">
         </div>
       </div>
