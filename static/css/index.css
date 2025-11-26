@@ -155,25 +155,3 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
-
-/* Mobile responsive grid for visualization videos */
-@media screen and (max-width: 768px) {
-  .column.is-half-mobile {
-    flex: none !important;
-    width: 50% !important;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  .column.is-half-tablet {
-    flex: none !important;
-    width: 50% !important;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .column.is-one-quarter-desktop {
-    flex: none !important;
-    width: 25% !important;
-  }
-}
