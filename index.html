@@ -159,72 +159,12 @@
                 type="image/jpg">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="fcm">FCM is a training-free, likelihood-guided diffusion update, enabling fast, 
+          stable 3D point cloud reconstruction from single/multi-view inputs.
       </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -234,31 +174,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Reconstructing high-quality point clouds from images remains challenging in computer vision. 
+            Existing generative models, particularly diffusion models, based approaches that directly 
+            learn the posterior may suffer from inflexibility—they require conditioning signals during 
+            training, support only a fixed number of input views, and need complete retraining for different 
+            measurements. Recent diffusion-based methods have attempted to address this by combining 
+            prior models with likelihood updates, but they rely on heuristic fixed step sizes for the 
+            likelihood update that lead to slow convergence and suboptimal reconstruction quality. We 
+            advance this line of approach by integrating our novel Forward Curvature-Matching (FCM) update 
+            method with diffusion sampling. Our method dynamically determines optimal step sizes using only 
+            forward automatic differentiation and finite-difference curvature estimates, enabling precise 
+            optimization of the likelihood update. This formulation enables high-fidelity reconstruction 
+            from both single-view and multi-view inputs, and supports various input modalities through 
+            simple operator substitution—all without retraining. Experiments on ShapeNet and CO3D datasets 
+            demonstrate that our method achieves superior reconstruction quality at matched or lower NFEs, 
+            yielding higher F-score and lower CD and EMD, validating its efficiency and adaptability for practical applications.
           </p>
         </div>
       </div>
@@ -420,11 +350,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{shin2025FCM,
+  author    = {Shin, Seunghyeok and Kim, Dabin and Lim, Hongki},
+  title     = {Adaptive 3D Reconstruction via Diffusion Priors and Forward Curvature-Matching Likelihood Updates},
+  booktitle = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems},
+  year      = {2025},
+  url       = {https://openreview.net/forum?id=IJLqUjtrls}
 }</code></pre>
   </div>
 </section>
