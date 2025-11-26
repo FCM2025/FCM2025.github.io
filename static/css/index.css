@@ -159,21 +159,21 @@ body {
 /* Mobile responsive grid for visualization videos */
 @media screen and (max-width: 768px) {
   .column.is-half-mobile {
-    flex-basis: 50% !important;
-    max-width: 50% !important;
+    flex: none !important;
+    width: 50% !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .column.is-half-tablet {
-    flex-basis: 50% !important;
-    max-width: 50% !important;
+    flex: none !important;
+    width: 50% !important;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .column.is-one-quarter-desktop {
-    flex-basis: 25% !important;
-    max-width: 25% !important;
+    flex: none !important;
+    width: 25% !important;
   }
 }
